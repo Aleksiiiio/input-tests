@@ -6,7 +6,7 @@ img{
   margin: 10px;
 }
 
-#images{
+.blackborder{
   border: 3px black solid;
 }
 
@@ -20,9 +20,4 @@ img{
   font-style: italic;
   font-size: large;
   color: forestgreen;
-}
-
-
-#paragraphs{
-  border: 3px black solid;
 }
