@@ -26,8 +26,14 @@ function App() {
     }
   }
   //paragraphs
+  const [textClick, setTextClick] = useState(0);
+  
   let texts = ["buzdygan inkuba","berdysz adepta","pożoga świętości","kostur krwawego księżyca","kostur korzenia"]
-
+  function textClickHandle(e){
+    if(textClick == 1) setTextClick(0);
+    else setTextClick(textClick + 1);
+    console.log(textClick)
+  }
 
   return (
     <div className="container">
@@ -41,7 +47,8 @@ function App() {
           <h4>array.map((arrayItem,index)=&gt;(function))</h4>
           <div className='d-flex flex-row align-items-center justify-content-center my-2' id='paragraphs'>
             {texts.map((text,index)=>(
-              <p className='text-center m-2' id='fancy'>
+              <p key={index} className={`text-center m-2 ${textClick == 0 ? "violet" : "green"}`}
+              onClick={textClickHandle}>
                 {text}
               </p>
             ))}

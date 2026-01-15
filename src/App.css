@@ -10,11 +10,18 @@ img{
   border: 3px black solid;
 }
 
-#fancy{
+.violet{
   font-style: italic;
   font-size: large;
   color: blueviolet;
 }
+
+.green{
+  font-style: italic;
+  font-size: large;
+  color: forestgreen;
+}
+
 
 #paragraphs{
   border: 3px black solid;
