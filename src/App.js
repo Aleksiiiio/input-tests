@@ -42,6 +42,16 @@ function App() {
     let option = e.target.option.value;
     alert(text+", "+number+", "+option);
   }
+
+  //read from file
+  function handleFileRead(){
+    let p = document.getElementById("textfromfile")
+  fetch("/data.txt")
+  .then(res => res.text())
+  .then(text => {
+    p.textContent = text;
+  });
+  }
   return (
     <div className="container">
       <div className='d-flex flex-column'>
@@ -61,7 +71,7 @@ function App() {
             ))}
           </div>
           <h4>e.target.&lt;id&gt;.value</h4>
-          <div className='d-flex flex-column align-items-center justify-content-center blackborder p-2' id='form'>
+          <div className='d-flex flex-column align-items-center justify-content-center blackborder p-2 mb-2' id='form'>
               <form onSubmit={handleSubmit} className='w-100'>
                 <div className='form-group'>
                     <label htmlFor='text'>Tekst</label>
@@ -83,6 +93,11 @@ function App() {
                 </div>
                 <button type="submit" className='btn btn-primary my-2'>Wyświetl</button>
               </form>
+          </div>
+          <h2>fetch("file").then(res => res.text().then(text => p.textContent = text;);)</h2>
+          <div className='d-flex flex-column align-items-center justify-content-center blackborder'>
+            <button className='w-25' onClick={handleFileRead}>Read From File</button>
+            <p id='textfromfile'></p>
           </div>
       </div>
     </div>
