@@ -5,3 +5,17 @@ img:hover{
 img{
   margin: 10px;
 }
+
+#images{
+  border: 3px black solid;
+}
+
+#fancy{
+  font-style: italic;
+  font-size: large;
+  color: blueviolet;
+}
+
+#paragraphs{
+  border: 3px black solid;
+}
